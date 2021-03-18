@@ -8,8 +8,6 @@ var temp  = [
 function myArrayFunction(arr) {
     var newTemp = [...arr];
     var averageDayTemp = [];
-
-   
     return averageDayTemp;
 }
 myArrayFunction(averageDayTemp);
