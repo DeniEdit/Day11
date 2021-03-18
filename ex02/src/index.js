@@ -1,4 +1,4 @@
-var temp  = [
+var temps  = [
     [31, 32, 19, 37],
     [29, 27, 55, 36],
     [17, 27, 42, 46],
@@ -6,10 +6,21 @@ var temp  = [
     [91, 27, 31, 61]
 ];
 function myArrayFunction(arr) {
-    var newTemp = [...arr];
+    var newTemps = [...arr];
     var averageDayTemp = [];
+
+    for (i=0; i<arr.length; i++) {
+        newTemps = arr[i];
+        var sum = 0;
+
+    for (j=0; j < newTemps.length; j++) {
+        sum += newTemps[j];
+    }
+    var averageDayValue = sum / newTemps.length;
+    averageDayTemp.push(averageDayValue);
+    }
     return averageDayTemp;
 }
-myArrayFunction(averageDayTemp);
-console.log(myArrayFunction(averageDayTemp));
+myArrayFunction(temps);
+console.log(myArrayFunction(temps));
 module.exports = myArrayFunction;
